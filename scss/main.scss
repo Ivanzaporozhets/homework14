@@ -1,0 +1,68 @@
+@import "_reset";
+@import "_include-media";
+@import "_header";
+@import "_variables";
+@mixin clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+@mixin body-color($body-color) {
+  color: $body-color;
+}
+body {
+  background: #eff7fa;
+}
+.container.nav-logo {
+  margin-bottom: 58px;
+  h1 {
+    color: #1a2940;
+    font-size: 35px;
+    font-family: "Roboto";
+    padding-top: 160px;
+    .text-muted {
+      position: relative;
+      display: block;
+      font-size: 15px;
+      padding: 15px 0 20px;
+      margin-bottom: 60px;
+    }
+    .text-muted:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 75px);
+      background: #7fe0de;
+      height: 2px;
+      width: 150px;
+    }
+  }
+  h1:before {
+    content: "";
+    position: absolute;
+    background: url(../images/ico.svg) no-repeat;
+    width: 80px;
+    height: 60px;
+    right: calc(50% - 40px);
+    top: 60px;
+  }
+}
+.container.gallery {
+  .row {
+
+    div {
+      max-width: 270px;
+      height: 200px;
+      background: #fff;
+      padding: 0;
+      margin:0 15px 25px 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
